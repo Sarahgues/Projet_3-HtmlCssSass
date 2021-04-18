@@ -30,12 +30,14 @@ li {
 }
 
 a {
+    color: white;
     text-decoration: none;
     &:visited {
         color: $white;
     }
 }
 
+//**************header**********
 .title {
     padding: 5px 0 0 10px;
     z-index: 10;
@@ -56,14 +58,14 @@ a {
     position: absolute;
     top: 4px;
     right: 10px;
-    z-index: 11;
+    z-index: 100;
     li {
         display: inline;
         padding: 0 15px;
         border-left: 3px solid $white;
         &:hover {
             border: 2px solid $white;
-            transition: 0.5 ease-in-out;
+            transition: 0.5s ease-in-out;
         }
         &:active {
             border: 5px solid $white;
@@ -87,12 +89,12 @@ a {
 
 //*****carousel******
 .carousel {
-    width: 30%;
+    width: 20%;
     border-radius: 0px 0px 15px 15px;
     margin: -20px auto 20px auto;
     overflow: hidden;
     box-shadow: 8px 8px 4px -3px rgba(0, 0, 0, 0.7);
-    @media (maw-width: 840px) {
+    @media (max-width: 840px) {
         display: none;
     }
     &__figure {
@@ -101,6 +103,7 @@ a {
         margin: 0;
         padding: 0;
         font-size: 0;
+        animation: 10s sliders infinite;
         &--pic {
             width: 33.33%;
             height: auto;

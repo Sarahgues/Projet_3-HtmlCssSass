@@ -200,10 +200,19 @@ a:visited {
   margin: 0 auto;
   width: 320px;
 }
+.button:hover .button__rect {
+  stroke-dasharray: 760;
+  stroke-dashoffset: 0;
+  stroke-width: 2px;
+}
 .button__rect {
   fill: transparent;
   stroke: orange;
   border-bottom: 5px solid orange;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
 }
 .button__text {
   position: relative;
